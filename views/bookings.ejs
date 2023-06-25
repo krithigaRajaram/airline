@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JetLine | My Bookings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<header>
+
+    <div class="header-1">
+
+        <a href="#" class="logo"><i class="fas fa-plane"></i>JETLINE</a>
+
+    </div>
+
+    <div class="header-2">
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="home.html">HOME</a>
+            <a href="flights.html">FLIGHTS</a>
+            <a href="login.html">LOGIN</a>
+            <a href="signup.html">SIGN-UP</a>
+
+            
+        </nav>
+
+        <div class="icons">
+          
+           <!-- <a href="/searching" class="fas fa-search"></a>-->
+            <a href="/profile" class="fas fa-user-circle" ></a>
+        </div>
+        
+            
+         </div>
+
+    </div>
+
+</header>
+
+<section class="category1" id="category">
+
+    <h1 class="heading"><span>MY BOOKINGS</span></h1>
+
+    <div class="box-container1" >
+
+    
+    
+    <%bookingsList.forEach(booking=> {%>
+        <div class="box1">  
+             
+   
+            <p><span><b>Email ID: </b><%=booking.email %></span></p> 
+            <p><span><b>Flight Number: </b><%=booking.id %></span></p>
+            <p><span><b>No of Passengers: </b><%= booking.tickcount %></span></p>
+            <p><span><b>Travel Date: </b><%= booking.traveldate %></span></p>
+            <p><span><b>Takeoff Time: </b><%= booking.takeofftime %></span></p>
+            <p><span><b>Total Amount: </b><%= booking.amount %></span></p>
+            <p><span><b>Mode of Payment: </b><%= booking.paymentmode %></span></p>
+          
+          
+            
+           </div>
+            <%})%>     
+    
+</div>
+</section>
+</body>
+</html>

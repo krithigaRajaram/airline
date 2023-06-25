@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JetLine | Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<header>
+
+    <div class="header-1">
+
+        <a href="#" class="logo"><i class="fas fa-plane"></i>JETLINE</a>
+
+    </div>
+
+    <div class="header-2">
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="#home">HOME</a>
+            <a href="flights.html">FLIGHTS</a>
+           
+            <a href="login.html">LOGIN</a>
+            <a href="signup.html">SIGN-UP</a>
+
+
+            
+        </nav>
+
+        <div class="icons">
+          
+           <!-- <a href="/searching" class="fas fa-search"></a>-->
+            <a href="/profile" class="fas fa-user-circle" ></a>
+        </div>
+        
+            
+         </div>
+
+    </div>
+
+</header>
+
+<section class="home" id="home">
+
+    <div class="image">
+    </div>
+
+    <section class="home" id="home">
+
+        <div class="image">
+        </div>
+    
+        <div class="content">
+        
+    <div class="cent">
+        <div class="search">
+        
+       
+        <form  action="searching" method="post">
+            <h1>Flights</h1>
+            <fieldset>
+                <label for="from"></label>
+                <span class="lab" style="font-size: 2rem;">Takeoff Location:</span>
+                <select class="selectpicker" name="selectpicker" required name='from' >
+                <option name="" value="0" disabled selected>Origin</option>
+                <option value="Mumbai">MUMBAI</option>
+                <option value="Delhi">DELHI</option>
+                <option value="Kolkata">KOLKATA</option>
+                <option value="Bangalore">BANGALORE</option>
+                <option value="Chennai">CHENNAI</option>
+            </select>
+        
+    </fieldset>
+
+    <fieldset>
+        <label for="to"></label>
+        <span class="lab" style="font-size: 2rem;">Landing Location:</span>
+        <select  class="selectpicker1" name="selectpicker1" required name='to'>
+            <option name="" value="20" disabled selected>Destination</option>
+               
+                <option value="Mumbai">MUMBAI</option>
+                <option value="Delhi">DELHI</option>
+                <option value="Kolkata">KOLKATA</option>
+                <option value="Bangalore">BANGALORE</option>
+                <option value="Chennai">CHENNAI</option>
+            </select><br>
+            
+            </fieldset>
+            <fieldset>
+              
+                
+
+            <span class="lab" style="font-size: 2rem;">Departure Date:</span>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            <input type="date" name="date" class="drop" id="date" min="2023-06-21" max="2023-07-21" required=""><br>
+        </fieldset>
+        <fieldset>
+            <span class="lab" style="font-size: 2rem;">Departure Time:</span>
+            <input type="time" name="time" class="drop" id="time" required=""><br>
+            </fieldset>
+            <input type="submit" name="Search" value="Search" id="flightsButton">
+          </form>
+            
+            
+           
+        </div>
+        </div>
+        </section>
+
+
+<script src="script.js"></script>
+    
+</body>
+</html>

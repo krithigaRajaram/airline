@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JetLine | Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<header>
+
+    <div class="header-1">
+
+        <a href="#" class="logo"><i class="fas fa-plane"></i>JETLINE</a>
+
+    </div>
+
+    <div class="header-2">
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="home.html">HOME</a>
+            <a href="flights.html">FLIGHTS</a>
+            <a href="login.html">LOGIN</a>
+            <a href="signup.html">SIGN-UP</a>
+
+            
+        </nav>
+
+  
+            
+         </div>
+
+    </div>
+
+</header>
+
+<section class="home" id="home">
+
+    <div class="image">
+    </div>
+
+    <section class="home" id="home">
+
+        <div class="image">
+        </div>
+    
+        <div class="content">
+        
+    <div class="centp">
+
+    <form action="profile" method="post" id="mytable">
+    <img id="image" src="images/prof.png">
+    <div class="para">
+    <%customersList.forEach( customer=> {%>
+        <p><span><%=customer.username %></span></p>
+        <p><span><%=customer.email %></span></p>
+        <p><span><%= customer.contact %></span></p>
+        <a href="/logout" class="btn">Logout</a>
+        <a href="/bookings" class="btn">My Bookings</a>
+
+<%})%> 
+</div>
+</form>
+
+
+</body>
+</html>

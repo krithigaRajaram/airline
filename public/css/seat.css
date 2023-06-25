@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+  --green:#21537bed;
+  --black:#020202;
+}
+
+*{
+  font-family: 'Nunito', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  outline: none; border:none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+
+*::selection{
+  background:var(--green);
+  color:#fff;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 6.5rem;
+    scroll-behavior: smooth;
+  }
+  
+  section{
+    padding:2rem 9%;
+  }
+  
+  .btn{
+    display: inline-block;
+    margin-top: 1rem;
+    background:var(--green);
+    color:#fff;
+    padding:.8rem 3rem;
+    font-size: 1.7rem;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .btn:hover{
+    background:var(--green);
+  }
+  
+  
+  .heading{
+    text-align: center;
+    color:var(--black);
+    text-transform: uppercase;
+    padding:1rem;
+    font-size: 3.5rem;
+    padding-bottom: 2rem;
+  }
+  
+  .heading span{
+    color:var(--green);
+    text-transform: uppercase;
+  }
+  
+  .header-1{
+    background:#eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 9%;
+  }
+  .header .flex .profile{
+    width: 30rem;
+    position: absolute;
+    top:120%; right: 2rem;
+    background-color: var(--white);
+    border:var(--border);
+    padding:1.5rem;
+    text-align: center;
+    display: none;
+    animation: fadeIn .2s linear;
+  }
+  
+  .header .flex .profile.active{
+    display: block;
+  }
+  
+  .header .flex .profile .name{
+    font-size: 1.7rem;
+    margin-bottom: .5rem;
+  }
+  
+  .header .flex .profile .account{
+    font-size: 1.7rem;
+    color:var(--light-color);
+    margin-top: 1.5rem;
+  }
+  
+  .header .flex .profile .account a{
+    color:var(--black);
+    text-decoration:underline;
+  }
+  
+  .header .flex .profile .account a:hover{
+    color:var(--red);
+  }
+  
+  
+  .logo{
+    color:var(--black);
+    font-weight: bolder;
+    font-size: 3rem;
+  }
+  
+  .logo i{
+    padding-right: .5rem;
+    color:var(--green);
+  }
+  
+  .header-1 .search-box-container{
+    display: flex;
+    height:5rem;
+  }
+  
+  .header-1 .search-box-container #search-box{
+    height: 100%;
+    width:100%;
+    padding:1rem;
+    font-size: 2rem;
+    color:#333;
+    border:.1rem solid rgba(0,0,0,.3);
+    text-transform: none;
+  }
+  
+  .header-1 .search-box-container label{
+    height: 100%;
+    width:8rem;
+    font-size: 2.5rem;
+    line-height: 5rem;
+    color:#fff;
+    background:var(--green);
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .header-1 .search-box-container label:hover{
+    background:var(--black);
+  }
+  
+  .header-2{
+    background:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 9%;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    position: relative;
+  }
+  
+  .header-2.active{
+    position: fixed;
+    top:0; left: 0; right:0;
+    z-index: 10000;
+  }
+  
+  .header-2 .navbar a{
+    padding:1.5rem 1.5rem;
+    font-size: 2.2rem;
+    border-radius: .5rem;
+    color:var(--black);
+    font-weight: bolder;
+  }
+  
+  .header-2 .navbar a:hover{
+    color:var(--green);
+    
+  }
+  
+  .header-2 .icons a{
+    font-size: 2.5rem;
+    color:var(--black);
+    padding-left: 1rem;
+  }
+  
+  .header-2 .icons a:hover{
+    color:var(--green);
+  }
+  
+  #menu-bar{
+    font-size: 3rem;
+    border-radius: .5rem;
+    border:.1rem solid var(--black);
+    padding:.8rem 1.5rem;
+    color:var(--black);
+    cursor: pointer;
+    display: none;
+  }
+  
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: url('../images/f2.jpg') no-repeat;
+    background-size: cover;
+    padding: 10rem;
+    position:fixed;
+    width: 100%;
+  
+  
+  }
+  
+.home .image{
+    flex:1 1 40rem;
+    padding-top: 50rem;
+  }
+  
+  .home .image img{
+    width:100%;
+  }
+  
+  .home .content{
+    flex:1 1 40rem;
+    padding-right: 60%;
+  }
+  
+  .home .content span{
+    font-size: 3rem;
+    color:#666;
+  }
+  
+  .home .content h3{
+    font-size: 3rem;
+    
+    font-weight: bolder;
+    padding-right: 5rem;
+    color:var(--black);
+  
+  }
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-size: 16px;
+  }
+  
+  .plane {
+    margin: 20px auto;
+    max-width: 300px;
+    background: white;
+  }
+  
+  .select {
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .select h1 {
+    width: 60%;
+    margin: 100px auto 35px auto;
+  }
+  
+  .exit {
+    position: relative;
+    height: 50px;
+  }
+  .exit:before, .exit:after {
+    content: "EXIT";
+    font-size: 14px;
+    line-height: 18px;
+    padding: 0px 2px 2px 2px;
+    display: block;
+    position: absolute;
+    background: rgb(22, 13, 77);
+    color: white;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 5px;
+  }
+  .exit:before {
+    left: 10px;
+  }
+  .exit:after {
+    right: 10px;
+  }
+  
+  ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .seats {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  
+  
+  .seat {
+    display: flex;
+    flex: 0 0 14.28%;
+    padding: 5px;
+    position: relative;
+  }
+  
+  .seat label {
+    display: block;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bolder;
+    line-height: 1.5rem;
+    padding: 4px 0;
+    background:rgba(35, 105, 148, 0.541);
+    border-radius: 5px; 
+    color: black; 
+  }
+  
+  .seat label:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0px 2px rgb(22, 13, 77);
+  }
+  
+  .seat:nth-child(3) {
+    margin-right: 14%;
+  }
+  .seat input[type=checkbox] {
+    position: absolute;
+  }
+  .seat input[type=checkbox]:checked + label {
+    background: #656e65;
+  }
+
+  .login-box {
+    width: 360px;
+    height: 130px;
+    margin: auto;
+    padding: 12px;
+    padding-bottom: 5px;
+    padding-top: 2px;
+    border-radius: 3px;
+   
+    background-color: #f0f0f0;
+  }
+  .login-box .red{
+    color: #f44336;
+  }
+  .login-box h3{
+    color:#f44336;
+  }
+
+#display{
+    display: inline-block;
+}

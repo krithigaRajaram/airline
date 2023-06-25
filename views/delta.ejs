@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JetLine | Delta</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+
+    <div class="header-1">
+
+        <a href="#" class="logo"><i class="fas fa-plane"></i>JETLINE</a>
+
+    </div>
+
+    <div class="header-2">
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="home.html">HOME</a>
+            <a href="flights.html">FLIGHTS</a>
+            <a href="login.html">LOGIN</a>
+            <a href="signup.html">SIGN-UP</a>
+
+            
+        </nav>
+
+        <div class="icons">
+          
+           <!-- <a href="/searching" class="fas fa-search"></a>-->
+            <a href="/profile" class="fas fa-user-circle" ></a>
+        </div>
+        
+            
+         </div>
+
+    </div>
+
+</header>
+
+<section class="category1" id="category">
+
+    <h1 class="heading"><span>FLIGHTS AVAILABLE</span></h1>
+
+    <div class="box-container1" > 
+        <%flightsList.forEach(flight=> {%>
+            <div class="box1">  
+             <!-- <form action="choose" method="post">   -->
+                <h1 style="font-size: 2.5rem; color:rgb(22, 13, 77); text-align: center;"><%= flight.takeoffloc %><b> ~~~ </b><%= flight.landingloc %></h1><br><br>
+                <p style="font-size: 2rem; font-weight:bolder; font-style: italic;"><span><b>Flight Name: </b><%= flight.name %></span></p>
+               
+                <p><span><b>Type: </b><%=flight.type %></span></p> 
+                <p><span><b>Departure Location: </b><%= flight.takeoffloc %></span></p>
+                <p><span><b>Landing Location: </b><%= flight.landingloc %></span></p>
+                <p><span><b>Price per Ticket: </b>Rs.<%= flight.tickprice %></span></p>
+                <p><span><b>Takeoff Date: </b><%= flight.takeoffdate %></span></p>
+                <p><span><b>Landing Date: </b><%= flight.landingdate %></span></p>
+                <p><span><b>Takeoff Time: </b><%= flight.takeofftime %></span></p>
+                <p><span><b>Landing Time: </b><%= flight.landingtime %></span></p>
+                <form action="book" method="post" id="mytable">
+                    <input type="hidden" name="id" id="id" value="<%=flight.id%>">
+                    <input type="hidden" name="takeoffdate" id="takeoffdate" value="<%=flight.takeoffdate%>">
+                    <input type="hidden" name="takeofftime" id="takeofftime" value="<%=flight.takeofftime%>">
+                    <input type="hidden" name="tickprice" id="tickprice" value="<%=flight.tickprice%>">
+                     <input type="submit" value="BOOK" class="btn btn-primary" name="submit">
+                </form>
+                
+              <!--  </form>-->
+               </div>
+                <%})%>   
+    
+</div>
+</section>
+</body>
+</html>

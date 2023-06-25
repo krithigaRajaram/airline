@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JetLine | Sign-Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<header>
+
+    <div class="header-1">
+
+        <a href="#" class="logo"><i class="fas fa-plane"></i>JETLINE</a>
+
+    </div>
+
+    <div class="header-2">
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="home.html">HOME</a>
+            <a href="flights.html">FLIGHTS</a>
+            <a href="login.html">LOGIN</a>
+            <a href="signup.html">SIGN-UP</a>
+
+            
+        </nav>
+
+      
+        
+            
+         </div>
+
+    </div>
+    <section class="home" id="home">
+
+        <div class="image">
+        </div>
+    
+        <div class="content">
+        
+    <div class="center">
+        <h1>Sign-Up</h1>
+       
+        <form  action="/signup" method="POST" onsubmit="return validate()">
+            <select class="selectpicker_l" name="selectpicker" required=""  >
+                <option name="" value="0" disabled selected>Admin / User?</option>
+                <option value="admin">ADMIN</option>
+                <option value="user">USER</option>
+            </select>
+            <div class="txt_field">
+                <input type="text" id="username" name="username" required>
+                <label>Username</label>
+            </div>
+            
+            <div class="txt_field">
+                <input type="text" id="email" name="email" required>
+                <label>Mail ID</label>
+            </div>
+            <div class="txt_field">
+                <input type="password" id="password" name="password" required>
+                <label>Password</label>
+            </div>
+            <div class="txt_field">
+                <input type="password" id="cnfmpassword" name="cnfmpassword" required>
+                <label>Confirm Password</label>
+            </div>
+            <div class="txt_field">
+                <input type="text" id="contact" name="contact" required>
+                <label>Contact</label>
+            </div>
+            
+                <input type="submit"  value="Sign-Up">
+               
+                
+           <div class="login_link">Existing customer?<a href=login.html> Login</a></div>
+           
+           <!-- <a href="#category" class="btn">SHOP NOW</a>-->
+           </form>
+        </div>
+        </section>
+  
+    
+        </header>
+        </body>
+        </html>

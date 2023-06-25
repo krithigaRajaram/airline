@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JetLine | Remove Flights</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<header>
+
+    <div class="header-1">
+
+        <a href="#" class="logo"><i class="fas fa-plane"></i>JETLINE</a>
+
+    </div>
+
+    <div class="header-2">
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="admin.html">HOME</a>
+            <a href="addflights.html">ADD FLIGHTS</a>
+       
+            <a href="allbookings">VIEW BOOKINGS</a>
+
+            
+        </nav>
+
+        <div class="icons">
+          
+           <!-- <a href="/searching" class="fas fa-search"></a>-->
+            <a href="/adminprofile" class="fas fa-user-circle" ></a>
+        </div>
+        
+            
+         </div>
+
+    </div>
+
+</header>
+    
+<section class="category" id="category">
+
+    <h1 class="heading"><span>FLIGHTS AVAILABLE</span></h1>
+
+    <div class="box-container" >
+        
+        <% flightsList.forEach(flight=> { %>
+        <div class="box">
+            <h1 style="font-size: 2.5rem; color:rgb(22, 13, 77);"><%= flight.takeoffloc %><b> ~~~ </b><%= flight.landingloc %></h1><br><br>
+            <p><span>Flight Number:<%=flight.id %></span></p>
+            <p><span>Flight Name: &nbsp;<b><%=flight.name %></b></span></p>
+           
+            <p><span>Departure Date <%= flight.takeoffdate %></span></p>
+            <p><span>Departure Time:<%= flight.takeofftime %></span></p>
+            <p><span>Cost: Rs.<%= flight.tickprice %></span></p>
+
+                <form action="/remove" method="POST">
+                    <input type="hidden" name="name" id="name" value="<%=flight.name%>">
+                    <input type="hidden" name="type" id="type" value="<%=flight.type%>">
+                    <input type="hidden" name="tickprice" id="tickprice" value="<%=flight.tickprice%>">
+                    <input type="hidden" name="takeoffloc" id="takeoffloc" value="<%=flight.takeoffloc%>">
+                    <input type="hidden" name="landingloc" id="landingloc" value="<%=flight.landingloc%>">
+                    <input type="hidden" name="takeoffdate" id="takeoffdate" value="<%=flight.takeoffdate%>">
+                    <input type="hidden" name="landingdate" id="landingdate" value="<%=flight.landingdate%>">
+                    <input type="hidden" name="takeofftime" id="takeofftime" value="<%=flight.takeofftime%>">
+                    <input type="hidden" name="landingtime" id="landingtime" value="<%=flight.landingtime%>">
+                    <input type="submit" value="REMOVE" class="btn btn-primary" name="submit" onClick="remove()"></input>
+                        <script>
+                            function remove(){
+                               confirm('Remove Flight?')
+                            }
+
+                        </script>
+                </form>
+        
+        </div>
+       
+        <% }) %>
+        
+        
+
+    </div>
+
+</section>
+</body>
+</html>
+

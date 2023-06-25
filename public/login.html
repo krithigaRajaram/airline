@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JetLine | Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<header>
+
+    <div class="header-1">
+
+        <a href="#" class="logo"><i class="fas fa-plane"></i>JETLINE</a>
+
+    </div>
+
+    <div class="header-2">
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="home.html">HOME</a>
+            <a href="flights.html">FLIGHTS</a>
+            <a href="login.html">LOGIN</a>
+            <a href="signup.html">SIGN-UP</a>
+
+            
+        </nav>
+
+     
+            
+         </div>
+
+    </div>
+    <section class="home" id="home">
+
+        <div class="image">
+        </div>
+    
+        <div class="content">
+        
+    <div class="center">
+        <h1>Login</h1>
+       
+        <form  action="/loginDetails" method="post">
+            <select class="selectpicker_l" name="selectpicker" required=""  >
+                <option name="" value="0" disabled selected>Admin / User?</option>
+                <option value="admin">ADMIN</option>
+                <option value="user">USER</option>
+            </select>
+            <div class="txt_field">
+                <input type="text" id="email" name="email" required>
+                <label>Enter Mail-ID</label>
+            </div>
+            <div class="txt_field">
+                <input type="password" id="password" name="password" required>
+                <label>Enter Password</label>
+            </div>
+            
+                <input type="submit"  value="LOGIN">
+               
+                
+           <div class="signup_link">New customer?<a href=signup.html> Signup</a></div>
+           
+           <!-- <a href="#category" class="btn">SHOP NOW</a>-->
+           </form>
+
+           <script>
+          
+           </script>
+        </div>
+        </section>
+        </header>
+        </body>
+        </html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JetLine | Add Flights</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<header>
+
+    <div class="header-1">
+
+        <a href="#" class="logo"><i class="fas fa-plane"></i>JETLINE</a>
+
+    </div>
+
+    <div class="header-2">
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="admin.html">HOME</a>
+           <!-- <a href="addflights.html">ADD FLIGHTS</a>-->
+            <a href="removeflights">REMOVE FLIGHTS</a>
+            <a href="allbookings">VIEW BOOKINGS</a>
+
+            
+        </nav>
+
+        <div class="icons">
+          
+           <!-- <a href="/searching" class="fas fa-search"></a>-->
+            <a href="/adminprofile" class="fas fa-user-circle" ></a>
+        </div>
+        
+            
+         </div>
+
+    </div>
+
+</header>
+
+<section class="home" id="home">
+
+    <div class="image">
+    </div>
+    
+        <div class="content">
+    <div class="centf">
+        <div class="search">
+        
+       
+        <form  action="/add" method="post">
+            <h1 style="text-align: center; font-weight: bold; font-size: 3rem; padding-top: 2%;padding-bottom: 2%;">Add Flights</h1>
+            <span class="lab" style="font-size: 2rem;">Flight Number:</span>
+            <input type="Number" name="id" class="drop" id="id">
+            <span class="lab" style="font-size: 2rem;">Ticket Price: </span>
+            <input type="Number" name="tickprice" class="drop" id="tickprice"><br><br><br>
+           
+            <fieldset>
+                <span class="lab" style="font-size: 2rem;">Flight Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <select class="selectpicker2" name="selectpicker2" required ='' >
+                <option name="" value="0" disabled selected>Name</option>
+                <option value="DELTA">DELTA</option>
+                <option value="INDIGO">INDIGO</option>
+                <option value="ALLIANCE">ALLIANCE</option>
+                <option value="GO AIR">GO AIR</option>
+              
+            </select>
+        
+    
+        <span class="lab" style="font-size: 2rem;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Flight Type: </span>
+        <select class="selectpicker3" name="selectpicker3" required ='' >
+        <option name="" value="0" disabled selected>Type</option>
+        <option value="Economy">Economy</option>
+        
+      
+    </select>
+
+</fieldset>
+<br>
+<br>
+<br>
+    
+           
+            
+            <fieldset>
+                <span class="lab" style="font-size: 2rem;">Take-Off Location:</span>
+                <select class="selectpicker" name="selectpicker" required name='from' >
+                <option name="" value="0" disabled selected>Origin</option>
+                <option value="Mumbai">MUMBAI</option>
+                <option value="Delhi">DELHI</option>
+                <option value="Kolkata">KOLKATA</option>
+                <option value="Bangalore">BANGALORE</option>
+                <option value="Chennai">CHENNAI</option>
+            </select>
+        
+   
+        <span class="lab" style="font-size: 2rem;">&nbsp;&nbsp;&nbsp;&nbsp;Landing Location:&nbsp;</span>
+        <select  class="selectpicker1" name="selectpicker1" required name='to'>
+            <option name="" value="20" disabled selected>Destination</option>
+               
+                <option value="Mumbai">MUMBAI</option>
+                <option value="Delhi">DELHI</option>
+                <option value="Kolkata">KOLKATA</option>
+                <option value="Bangalore">BANGALORE</option>
+                <option value="Chennai">CHENNAI</option>
+            </select><br>
+            
+            </fieldset>
+            <fieldset>
+                <span class="lab" style="font-size: 2rem;">Departure Date:</span>
+                <input type="date" name="tdate" class="drop" id="tdate">
+            
+            <span class="lab" style="font-size: 2rem;">Landing Date:</span>
+            <input type="date" name="ldate" class="drop" id="ldate">
+        </fieldset>
+        
+        <fieldset>
+            <span class="lab" style="font-size: 2rem;">Departure Time:</span>
+            <input type="time" name="ttime" class="drop" id="ttime">
+            
+                <span class="lab" style="font-size: 2rem;">Landing Time:</span>
+                <input type="time" name="ltime" class="drop" id="ltime">
+                </fieldset>
+             
+            <input type="submit" name="Update" value="Update" id="flightsButton">
+          </form>
+            
+            
+           
+        </div>
+        </div>
+        </section>
+</section>
+</body>
+</html>

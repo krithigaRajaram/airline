@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JetLine | Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<header>
+
+    <div class="header-1">
+
+        <a href="#" class="logo"><i class="fas fa-plane"></i>JETLINE</a>
+
+    </div>
+
+    <div class="header-2">
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="#">HOME</a>
+            <a href="addflights.html">ADD FLIGHTS</a>
+            <a href="removeflights">REMOVE FLIGHTS</a>
+            <a href="allbookings">VIEW BOOKINGS</a>
+
+            
+        </nav>
+
+      
+            
+         </div>
+
+    </div>
+
+</header>
+
+<section class="home" id="home">
+
+    <div class="image">
+    </div>
+
+    <section class="home" id="home">
+
+        <div class="image">
+        </div>
+    
+        <div class="content">
+        
+    <div class="centp">
+
+    <form action="adminprofile" method="post" id="mytable">
+    <img id="image" src="images/prof.png">
+    <div class="para">
+    <%adminsList.forEach( admin=> {%>
+        <p><span><%=admin.username %></span></p>
+        <p><span><%=admin.email %></span></p>
+        <p><span><%= admin.contact %></span></p>
+        <a href="/logout" class="btn">Logout</a>
+      
+
+<%})%> 
+</div>
+</form>
+
+
+</body>
+</html>
